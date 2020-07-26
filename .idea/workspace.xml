@@ -86,7 +86,11 @@
       <file leaf-file-name="Modal.module.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/UI/Modal/Modal.module.css">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="240">
+=======
+            <state relative-caret-position="358">
+>>>>>>> b092cc49703dd4968fa386d408cd98ee149bf827
               <caret line="29" column="11" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
             </state>
           </provider>
@@ -195,6 +199,38 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
+<<<<<<< HEAD
+=======
+            <path>
+              <item name="authentication" type="b2602c69:ProjectViewProjectNode" />
+              <item name="authentication" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="UI" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="authentication" type="b2602c69:ProjectViewProjectNode" />
+              <item name="authentication" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="UI" type="462c0819:PsiDirectoryNode" />
+              <item name="Backdrop" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="authentication" type="b2602c69:ProjectViewProjectNode" />
+              <item name="authentication" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="UI" type="462c0819:PsiDirectoryNode" />
+              <item name="Modal" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="authentication" type="b2602c69:ProjectViewProjectNode" />
+              <item name="authentication" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="shared" type="462c0819:PsiDirectoryNode" />
+            </path>
+>>>>>>> b092cc49703dd4968fa386d408cd98ee149bf827
           </expand>
           <select />
         </subPane>
@@ -238,24 +274,41 @@
       <workItem from="1595606725787" duration="6751000" />
       <workItem from="1595671714732" duration="27433000" />
       <workItem from="1595759190175" duration="6342000" />
+<<<<<<< HEAD
       <workItem from="1595771559403" duration="10951000" />
+=======
+      <workItem from="1595771559403" duration="10373000" />
+>>>>>>> b092cc49703dd4968fa386d408cd98ee149bf827
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="78406000" />
+=======
+    <option name="totallyTimeSpent" value="77828000" />
+>>>>>>> b092cc49703dd4968fa386d408cd98ee149bf827
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
+<<<<<<< HEAD
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4966216" visible="true" weight="0.25" />
+=======
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4966216" visible="true" weight="0.25" />
+>>>>>>> b092cc49703dd4968fa386d408cd98ee149bf827
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" sideWeight="0.5033784" side_tool="true" weight="0.25" />
+<<<<<<< HEAD
       <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.4543919" />
+=======
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3125" />
+>>>>>>> b092cc49703dd4968fa386d408cd98ee149bf827
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -274,6 +327,19 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/src/components/UI/Input/Input.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="21" column="58" selection-start-line="21" selection-start-column="58" selection-end-line="21" selection-end-column="58" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+>>>>>>> b092cc49703dd4968fa386d408cd98ee149bf827
     <entry file="file://$PROJECT_DIR$/src/components/SignUpForm/SignUpForm.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2436">
@@ -405,6 +471,16 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-21">
+          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> b092cc49703dd4968fa386d408cd98ee149bf827
     <entry file="file://$PROJECT_DIR$/src/components/SignUpForm/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
@@ -632,6 +708,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-41">
@@ -649,6 +726,11 @@
     <entry file="file://$PROJECT_DIR$/src/components/UI/Modal/Modal.module.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
+=======
+    <entry file="file://$PROJECT_DIR$/src/components/UI/Modal/Modal.module.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+>>>>>>> b092cc49703dd4968fa386d408cd98ee149bf827
           <caret line="29" column="11" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
         </state>
       </provider>

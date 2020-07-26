@@ -1,0 +1,35 @@
+.MainPage {
+  width: 70%;
+  margin: 19% auto;
+}
+
+.MainPage h1 {
+  color: #00bc00;
+  text-align: center;
+}
+
+.MainPage button {
+  display: block;
+  margin: 40px auto 0;
+}
+
+@media (max-width: 650px) {
+  .MainPage {
+    margin-top: 25%;
+    width: 90%;
+  }
+
+  .MainPage h1 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 420px) {
+  .MainPage {
+    margin-top: 30%;
+  }
+
+  .MainPage h1 {
+    font-size: 26px;
+  }
+}

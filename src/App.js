@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import {Route, Switch, Redirect} from 'react-router-dom'
+import Congratulations from './components/Congratulations'
+import MainPage from './components/MainPage'
+import SignInForm from './components/SignInForm'
+import SignUpForm from './components/SignUpForm'
+import StopAuth from './components/StopAuth'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Switch>
+        <Route path="/sign-up" component={SignUpForm}/>
+        <Route path="/not-allowed" component={StopAuth}/>
+        <Route path="/congratulations" component={Congratulations}/>
+        <Route path="/sign-in" component={SignInForm}/>
+        <Route path="/" component={MainPage}/>
+        <Redirect to="/"/>
+      </Switch>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

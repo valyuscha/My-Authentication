@@ -1,0 +1,30 @@
+.StopAuth {
+  width: 70%;
+  margin: 19% auto;
+}
+
+.StopAuth h1 {
+  color: #a52a2a;
+  text-align: center;
+}
+
+@media (max-width: 650px) {
+  .StopAuth {
+    margin-top: 25%;
+    width: 90%;
+  }
+
+  .StopAuth h1 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 420px) {
+  .StopAuth {
+    margin-top: 30%;
+  }
+
+  .StopAuth h1 {
+    font-size: 26px;
+  }
+}

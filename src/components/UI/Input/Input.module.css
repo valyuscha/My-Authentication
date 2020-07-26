@@ -1,0 +1,31 @@
+.Input input {
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  outline: none;
+  margin-top: 5px;
+  font-size: 16px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+}
+
+.Input p {
+  margin: 0;
+  color: #ff0000;
+}
+
+.show {
+  opacity: 1;
+}
+
+.hide {
+  opacity: 0;
+}
+
+@media (max-width: 530px) {
+  .Input p {
+    height: 21px;
+    overflow-y: scroll;
+  }
+}

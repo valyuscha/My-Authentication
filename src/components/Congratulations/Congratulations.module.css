@@ -1,0 +1,35 @@
+.Congratulations {
+  width: 70%;
+  margin: 19% auto;
+}
+
+.Congratulations h1 {
+  color: #00bc00;
+  text-align: center;
+}
+
+.Congratulations button {
+  display: block;
+  margin: 40px auto 0;
+}
+
+@media (max-width: 650px) {
+  .Congratulations {
+    margin-top: 25%;
+    width: 90%;
+  }
+
+  .Congratulations h1 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 420px) {
+  .Congratulations {
+    margin-top: 30%;
+  }
+
+  .Congratulations h1 {
+    font-size: 26px;
+  }
+}

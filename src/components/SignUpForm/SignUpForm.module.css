@@ -1,0 +1,51 @@
+.Form {
+  padding: 20px;
+  width: 500px;
+  background: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, .6);
+  margin: 50px auto 50px;
+}
+
+.Form h1 {
+  color: #0000ff;
+  text-align: center;
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+.Tools {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0 20px;
+}
+
+.Tools a {
+  color: #0000ff;
+  text-decoration: none;
+}
+
+.Tools a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .Form {
+    width: 80%;
+  }
+}
+
+@media (max-width: 365px) {
+  .Form h1 {
+    font-size: 30px;
+  }
+
+  .Tools {
+    flex-direction: column-reverse;
+  }
+
+  .Tools a {
+    margin-top: 20px;
+  }
+}

@@ -1,9 +1,10 @@
 import React from 'react'
+import {getCookie} from '../../shared/utility'
 import Button from '../UI/Button'
 import classes from './Congratulations.module.css'
 
 const congratulations = props => {
-  const token = localStorage.getItem('token')
+  const token = getCookie('token')
   if (!token) {
     props.history.push('/sign-up')
   }

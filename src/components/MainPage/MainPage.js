@@ -1,17 +1,18 @@
 import React, {Component} from 'react'
+import {getCookie} from '../../shared/utility'
 import Button from '../UI/Button'
 import classes from './MainPage.module.css'
 
 class MainPage extends Component {
   componentDidMount() {
-    const token = localStorage.getItem('token')
+    const token = getCookie('token')
     if (!token) {
       this.props.history.push('/sign-in')
     }
   }
 
   logout = () => {
-    localStorage.clear()
+    document.cookie = `token=${null}`
     this.props.history.push('/sign-in')
   }
 

@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 import Backdrop from '../UI/Backdrop'
 import Button from '../UI/Button'
 import Input from '../UI/Input'
+import Loader from '../UI/Loader'
 import Modal from '../UI/Modal'
 import {
   auth,
@@ -46,7 +47,9 @@ class SignInForm extends Component {
         errorMessage: 'Your password has to be no less than 6 characters'
       }
     },
-    isModalShow: false
+    isDisabled: false,
+    isModalShow: false,
+    isFormPushed: false
   }
 
   onChangeHandler = event => {
@@ -58,9 +61,11 @@ class SignInForm extends Component {
 
 
   submitFormHandler = async event => {
+    this.setState({isDisabled: true})
     const controls = {...this.state.controls}
     const formData = submitForm(event, controls, controls.email, controls.password)
     if (Object.keys(formData).length !== 0) {
+      this.setState({isFormPushed: true})
       const url = 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyDkOlROGpix-dQmSz8c386OlFqMPcitQ_Q'
       await auth(url, formData)
         .then(response => response
@@ -71,7 +76,7 @@ class SignInForm extends Component {
       }
     }
 
-    this.setState({controls})
+    this.setState({controls, isFormPushed: false, isDisabled: false})
   }
 
   render() {
@@ -109,8 +114,8 @@ class SignInForm extends Component {
             <Link to="/sign-up">Create a new account</Link>
             <Button
               type="submit"
-              action="Sign in"
-              disabled={disableButton(form)}
+              action={this.state.isFormPushed ? <Loader /> : 'Log in'}
+              disabled={disableButton(this.state.isDisabled, form)}
               clicked={this.submitFormHandler}/>
           </div>
         </form>

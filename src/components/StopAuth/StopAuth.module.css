@@ -8,6 +8,11 @@
   text-align: center;
 }
 
+.StopAuth button {
+  display: block;
+  margin: 40px auto 0;
+}
+
 @media (max-width: 650px) {
   .StopAuth {
     margin-top: 25%;

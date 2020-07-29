@@ -42,22 +42,20 @@ export const inputChangeHandler = (event, stateControls) => {
   return controls
 }
 
-export const disableButton = form => {
-  let disabled = false
-
+export const disableButton = (isDisabled, form) => {
   form.forEach((folder, index) => {
     if (index !== 0) {
       if (folder.value.trim() === '' || form[index - 1].value.trim() === '') {
-        disabled = true
+        isDisabled = true
       }
     } else {
       if (folder.value.trim() === '') {
-        disabled = true
+        isDisabled = true
       }
     }
   })
 
-  return disabled
+  return isDisabled
 }
 
 export const submitForm = (event, controls, email, password) => {
@@ -74,11 +72,18 @@ export const submitForm = (event, controls, email, password) => {
   return formData
 }
 
+export const getCookie = name => {
+  let matches = document.cookie.match(new RegExp(
+    "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+  ));
+  return matches ? decodeURIComponent(matches[1]) : undefined;
+}
+
 export const auth = async (url, authData) => {
   try {
     const response = await axios.post(url, authData)
     if (response.data.idToken) {
-      localStorage.setItem('token', response.data.idToken)
+      document.cookie = `token=${response.data.idToken}`
     }
   } catch (e) {
     return e

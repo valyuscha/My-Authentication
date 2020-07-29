@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 import Backdrop from '../UI/Backdrop'
 import Button from '../UI/Button'
 import Input from '../UI/Input'
+import Loader from '../UI/Loader'
 import Modal from '../UI/Modal'
 import {
   auth,
@@ -60,7 +61,7 @@ class SignUpForm extends Component {
         touched: false,
         valid: false,
         showError: false,
-        errorMessage: ''
+        errorMessage: 'Error'
       },
       email: {
         value: '',
@@ -93,13 +94,15 @@ class SignUpForm extends Component {
         errorMessage: 'Your password has to be no less than 6 characters'
       }
     },
-    isModalShow: false
+    isDisabled: false,
+    isModalShow: false,
+    isFormPushed: false
   }
 
   makeErrorMessageForAge = () => {
     const controls = {...this.state.controls}
     const value = controls.age.value
-    let errorMessage = ''
+    let errorMessage = 'Error'
 
     if (isNaN(value)) {
       errorMessage = 'Your age has to contain numbers, but not letters'
@@ -130,7 +133,8 @@ class SignUpForm extends Component {
     this.setState({controls})
   }
 
-  submitFormHandler = (event) => {
+  submitFormHandler = async event => {
+    this.setState({isDisabled: true})
     const controls = {...this.state.controls}
     const formData = submitForm(event, controls, controls.email, controls.password)
     this.makeErrorMessageForAge()
@@ -139,8 +143,9 @@ class SignUpForm extends Component {
       this.props.history.push('/not-allowed')
     } else if (Object.keys(formData).length !== 0) {
       if (controls.age.valid) {
+        this.setState({isFormPushed: true})
         const url = 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyDkOlROGpix-dQmSz8c386OlFqMPcitQ_Q'
-        auth(url, formData)
+        await auth(url, formData)
           .then(response => response
             ? this.setState({isModalShow: true})
             : this.props.history.push('/congratulations'))
@@ -148,9 +153,10 @@ class SignUpForm extends Component {
           controls[folder].value = ''
         }
       }
+
     }
 
-    this.setState({controls})
+    this.setState({controls, isFormPushed: false, isDisabled: false})
   }
 
   render() {
@@ -188,8 +194,8 @@ class SignUpForm extends Component {
             <Link to="/sign-in">Sign in</Link>
             <Button
               type="submit"
-              action="Sign up"
-              disabled={disableButton(form)}
+              action={this.state.isFormPushed ? <Loader /> : 'Sign up'}
+              disabled={disableButton(this.state.isDisabled, form)}
               clicked={this.submitFormHandler}/>
           </div>
         </form>
